@@ -1,0 +1,171 @@
+:root{
+    --main-bg-color: rgb(0, 168, 89);
+    --main-bg-color-lighter: rgb(0,194,100);
+}
+
+.material-icons:hover{
+    color: var(--main-bg-color)
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+    padding: 10px;
+}
+
+#logo{
+    width: 250px;
+    float: left;
+}
+
+
+.search-bar{
+    display: flex;
+    float: right;
+}
+
+#search-text:focus, #search-submit:focus{
+    outline: none;
+}
+
+#search-text{
+    padding: 10px 20px;
+    border: 0px solid white;
+    border-radius: 25px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    font-size: 16px;
+}
+
+#search-submit{
+    padding: 10px 20px;
+    border: 0px solid white;
+    border-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    background-color: white;
+    font-size: 18px;
+}
+
+#search-submit:hover{
+    color: white;
+    background-color: black
+    
+}
+
+
+nav{
+    background-color: var(--main-bg-color);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: var(--main-bg-color);
+}
+
+nav li a:active{
+    background-color: white;
+    color: var(--main-bg-color);
+}
+
+body{
+    margin: 0px;
+}
+
+#video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, th{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+table tr:hover{
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:var(--main-bg-color);
+    color: white;
+}
+
+/*Responsividade*/
+@media screen and (max-width: 600px) {
+    nav a{
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    header{
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        background: linear-gradient(110deg, var(--main-bg-color-lighter) 275px, var(--main-bg-color) 100px);
+    }
+
+    #logo{
+        float: none;
+        width: 100%;
+    }
+
+    .search-bar{
+
+        float: none;
+        width: 100%;
+    }
+    
+}
