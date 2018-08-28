@@ -18,7 +18,7 @@ html {
 header{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     background-color: var(--main-bg-color);
     padding: 10px;
@@ -34,11 +34,8 @@ header{
 
 .search-bar{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
-    justify-content: center;
-    position: relative;
+    justify-content: inherit;
 }
 
 #search-text{
@@ -67,8 +64,8 @@ header{
 }
 
 .user-div{
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: inherit;
 }
 
 #login-button{
@@ -79,7 +76,6 @@ header{
 #login-button:hover{
     background-color: black;
     color: white;
-
 }
 
 
@@ -121,18 +117,14 @@ nav li a:active{
 
 body{
     margin: 0px;
-}
-
-#video {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
-body table{
-    border-collapse: collapse;
     width: 100%;
+}
+
+table{
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 table td, th{
@@ -157,6 +149,11 @@ table th {
     color: white;
 }
 
+textarea{
+    height: 200px;
+    width: 50%;
+}
+
 /*Responsividade*/
 @media screen and (max-width: 600px) {
     nav li{
@@ -164,16 +161,11 @@ table th {
         display: block;
         text-align: left;
         width: 100%;
-        margin: 0;
     }
 
     header{
         float: none;
         display: block;
-        text-align: left;
-        width: 100%;
-        margin: 0;
-        padding: 15px;
     }
 
     #logo{
@@ -181,8 +173,19 @@ table th {
         width: 100%;
     }
 
+    .search-bar, .user-div{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
     body{
         width: 100%;
     }
+
+    textarea{
+        width: 100%;
+    }
+
+
     
 }
