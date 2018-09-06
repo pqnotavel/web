@@ -4,28 +4,29 @@
         <meta charset="utf-8">
         <meta name="description" content="Produtos Veterinários">
         <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/style-products.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <title>Produtos | Casa do Agricultor</title>
     </head>
     <body>
         <!-- CABEÇALHO -->
-        <a id="ancora">
-            <header>
-                <h1>Casa do Agricultor</h1>
+        <header>
+            <div id="div-logo">
                 <a href="index.html" title="Ir para a página inicial">
-                    <img src="../media/images/cda_white.png" alt="Casa do Agricultor" id="logo" />
+                    <h1 class="div-logo">Casa do Agricultor</h1>
+                    <!-- <img src="../media/images/cda_white.png" alt="Casa do Agricultor" class="div-logo" /> -->
                 </a>
-                <div class="search-bar">
-                    <input type="text" placeholder="Busca por, vacina, ração..." id="search-text" />
-                    <button type="submit" id="search-submit" class="button"><i class="material-icons">search</i></button>
-                </div>
-                <div class="user-div">
-                    <a href="login.html" title="LOGIN">
-                        <button type="button" id="login-button" class="button"><i class="material-icons">person</i>Login</button>
-                    </a>
-                </div>
-            </header>
-        </a>
+            </div>
+            <div id="div-search-bar">
+                <input type="text" placeholder="Busca por, vacina, ração..." id="search-text" />
+                <button type="submit" id="search-submit" class="button" title="Pesquisar"><i class="material-icons">search</i></button>
+            </div>
+            <div id="div-user">
+                <a href="login.html" title="LOGIN">
+                    <button type="button" id="login-button" class="button"><i class="material-icons">person</i>Login</button>
+                </a>
+            </div>
+        </header>
         <!-- MENU -->
         <nav>
             <ul>
@@ -201,11 +202,12 @@
         </aside>
         <!-- RODAPÉ -->
         <footer>
-            <br/>
-            <a href="https://www.facebook.com/casadoagricultoripiau/">Facebook</a>
-            <br/>
-            Copyright &copy; 2018 - by Rai Sales and Tulio Campos<br/>
-            <a href="#ancora">Voltar ao topo</a>
+            <a href="http://www.facebook.com/casadoagricultoripiau/">
+                <figure>
+                    <img src="../media/images/facebook-box.png" alt/>
+                </figure>
+            </a>
+            <a href="#">Voltar ao topo</a><br/> Copyright &copy; 2018 - Raí Bizerra and Tulio Campos<br/>
         </footer>
     </body>
 </html>

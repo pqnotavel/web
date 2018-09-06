@@ -4,28 +4,29 @@
         <meta charset="utf-8">
         <meta name="description" content="Loja de produtos agrícolas e veterinários">
         <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/style-contact.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <title>Contato | Casa do Agricultor</title>
     </head>
     <body>
         <!-- CABEÇALHO -->
-        <a id="ancora">
-            <header>
-                <h1>Casa do Agricultor</h1>
+        <header>
+            <div id="div-logo">
                 <a href="index.html" title="Ir para a página inicial">
-                    <img src="../media/images/cda_white.png" alt="Casa do Agricultor" id="logo" />
+                    <h1 class="div-logo">Casa do Agricultor</h1>
+                    <!-- <img src="../media/images/cda_white.png" alt="Casa do Agricultor" class="div-logo" /> -->
                 </a>
-                <div class="search-bar">
-                    <input type="text" placeholder="Busca por, vacina, ração..." id="search-text" />
-                    <button type="submit" id="search-submit" class="button"><i class="material-icons">search</i></button>
-                </div>
-                <div class="user-div">
-                    <a href="login.html" title="LOGIN">
-                        <button type="button" id="login-button" class="button"><i class="material-icons">person</i>Login</button>
-                    </a>
-                </div>
-            </header>
-        </a>
+            </div>
+            <div id="div-search-bar">
+                <input type="text" placeholder="Busca por, vacina, ração..." id="search-text" />
+                <button type="submit" id="search-submit" class="button" title="Pesquisar"><i class="material-icons">search</i></button>
+            </div>
+            <div id="div-user">
+                <a href="login.html" title="LOGIN">
+                    <button type="button" id="login-button" class="button"><i class="material-icons">person</i>Login</button>
+                </a>
+            </div>
+        </header>
         <!-- MENU -->
         <nav>
             <ul>
@@ -37,48 +38,28 @@
         <!-- CONTEÚDO PRINCIPAL -->
         <section>
             <article>
-                <div id="endereco"> 
-                    <h2>Onde Estamos</h2>
-                        <p>
-                            <b>Endereço:</b>
-                            <br/>
-                            Rua: Dois de julho, 144 - Centro
-                            <br/>
-                            Ipiaú - Bahia
-                            <br/>
-                            CEP: 45570-000
-                            <br/>
-                            Fone: (73)3531-4009
-                        </p>
-                </div>  
-                <form name="formulario">
-                    <h2>Formulário de Contato</h2>
-                    <p>
-                        <b>Nome:</b>
-                        <br/>
-                        <input type=text name="nome">
-                    </p>
-                    <p>
-                        <b>Email:</b>
-                        <br/>
-                        <input type=text name="email">
-                    </p>
-                    <p>
-                        <b>Assunto:</b>
-                        <br/>
-                        <input type=text name="assunto">
-                    </p>
-                        
-                    <p>
-                        <b>Mensagem:</b>
-                        <br/>
-                        <textarea name="Mensagem" wrap="virtual"></textarea>
-                    </p>
-                    <p>
-                        <input type="submit" value="Enviar Email"> 
-                        <input type="reset" value="Limpar Formulário">
-                    </p>
-                </form>
+                <div class="container">
+                    <div>
+                        <h2>Fale conosco</h2>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.925016182928!2d-39.73550778516514!3d-14.140505890096838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x738b400a303761d%3A0xf07d1fe2dfedddf!2sR.+Dois+de+Julho%2C+144%2C+Ipia%C3%BA+-+BA%2C+45570-000!5e0!3m2!1spt-BR!2sbr!4v1536196114476" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="column">
+                            <form action="">
+                                <label for="fname">Nome</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Seu nome...">
+                                <label for="lname">Sobrenome</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Seu sobrenome...">
+                                <label for="subject">Mensagem</label>
+                                <textarea id="subject" name="subject" placeholder="Escreva algo..."></textarea>
+                                <input type="submit" value="Enviar">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </article>
         </section>
         <!-- BARRA LATERAL DIREITA -->
@@ -95,10 +76,13 @@
 			<h2>
 				Permaneça conectado
 			</h2> -->
-			<a href="http://www.facebook.com/casadoagricultoripiau/">Facebook</a>
-			<br/>
-			Copyright &copy; 2018 - by Rai Sales and Tulio Campos<br/>
-            <a href="#ancor">Voltar ao topo</a>
+            <a href="http://www.facebook.com/casadoagricultoripiau/">
+                <figure>
+                    <img src="../media/images/facebook-box.png" alt>
+                </figure>
+            </a>
+            <a href="#">Voltar ao topo</a><br/>
+			Copyright &copy; 2018 - Raí Bizerra and Tulio Campos<br/>
         </footer>
     </body>
 </html>
