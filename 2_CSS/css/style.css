@@ -80,15 +80,11 @@ header, footer{
 
 #div-user{
     text-align: right;
-    padding: 10px;
+    width: 250px;
 }
 
 a.button{
-    justify-content: center;
-    justify-items: center;
-    
-    text-align: center;
-    padding:6px;
+    padding: 10px;
 }
 
 a.button:hover{
