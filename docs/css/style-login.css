@@ -58,7 +58,6 @@ body::after{
 .loginbox::after{
     content: "";
     background:#000;
-    /* background: url(../../media/images/background.jpg); */
     opacity: 0.95;
     top: 0;
     left: 0;
