@@ -13,12 +13,6 @@ a{
     color: white
 }
 
-/* Body */
-body{
-    width: 100%;
-    /* background-color: #dde; */
-}
-
 /* Header */
 header{
     width: 100%;
@@ -130,11 +124,8 @@ nav ul{
     color: rgb(66, 117, 189);
 }
 
-footer{
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
+section {
+  min-height: 100vh;
 }
 
 @media only screen and (max-width: 500px) {
@@ -146,6 +137,6 @@ footer{
     nav ul{
         display: block;
         width: 100%;
-        text-align: center;
+        /* text-align: center; */
     }
 }
