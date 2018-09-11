@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/style-login.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <title>Login</title>
     </head>
@@ -19,37 +21,28 @@
                 <input type="text" placeholder="Busca por, vacina, ração..." id="search-text" />
                 <button type="submit" id="search-submit" class="button" title="Pesquisar"><i class="material-icons">search</i></button>
             </div>
-            <div id="div-user">
-                <a href="login.html" title="LOGIN">
-                    <button type="button" id="login-button" class="button"><i class="material-icons">person</i>Login</button>
-                </a>
-            </div>
+            <a href="login.html" class="button"><i class="material-icons">person</i>Login</a>
         </header>
         <!-- MENU -->
         <nav>
-            <ul>
-                <li><a href="products.html" title="PRODUTOS">PRODUTOS</a></li>
-                <li><a href="products_adm.html" title="PRODUTOS (ADMINISTRATIVO)">PRODUTOS (ADMINISTRATIVO)</a></li>
-                <li><a href="contact.html" title="CONTATO">CONTATO</a></li>
+            <ul id="ul-main">
+                <li>
+                    <a href="products.html" title="PRODUTOS" class="nav-item">PRODUTOS</a>
+                </li>
+                <li><a href="products_adm.html" title="PRODUTOS (ADMINISTRATIVO)" class="nav-item">PRODUTOS (ADMINISTRATIVO)</a></li>
+                <li><a href="contact.html" title="CONTATO" class="nav-item">CONTATO</a></li>
             </ul>
         </nav>
-        <div class="container" >     
-            <!--FORMULÁRIO DE LOGIN-->
-            <div id="login">
-                <form> 
-                    <h1>Login</h1> 
-                    <p> 
-                    <input id="nome_login" name="nome_login" required="required" type="text" placeholder="Digite o Usuário"/>
-                    </p>
-
-                    <p> 
-                    <input id="password" name="password" required="required" type="password" placeholder="Digite a Senha"/> 
-                    </p>
-                    <p> 
-                    <input type="submit" value="Logar" /> 
-                    </p>
-                </form>
-            </div>
+        <div class="loginbox">
+            <img src="../media/images/login.png" class="avatar" alt="avatar"/>
+            <h1>Login</h1>
+            <form>
+                <p>Usuário</p>
+                <input type="text" name="user" placeholder="Digite o Usuário">
+                <p>Senha</p>
+                <input type="password" name="pass" placeholder="Digite a Senha">
+                <input type="submit" name="login" value="Login">
+            </form>
         </div>
         <footer>
             <a href="http://www.facebook.com/casadoagricultoripiau/">

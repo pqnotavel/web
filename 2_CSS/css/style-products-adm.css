@@ -1,0 +1,34 @@
+#div-table{
+    overflow-x: scroll;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, th{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+table tr{
+    background-color: white;
+}
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+table tr:hover{
+    background-color: rgba(34, 61, 98, 0.2);
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:rgb(34, 61, 98);
+    color: white;
+}

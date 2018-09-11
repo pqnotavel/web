@@ -16,7 +16,7 @@
 			<div id="div-logo">
 				<a href="index.html" title="Ir para a página inicial">
 					<h1>Casa do Agricultor</h1>	
-					<!-- <img src="../media/images/cda_white.png" alt="Casa do Agricultor" class="div-logo" /> -->
+					<!-- <img src="../media/../media/images/cda_white.png" alt="Casa do Agricultor" class="div-logo" /> -->
 				</a>
 			</div>
 			<div id="div-search-bar">
@@ -24,32 +24,42 @@
 				<button type="submit" id="search-submit" class="button" title="Pesquisar" ><i class="material-icons">search</i></button>
 				<!-- <button type="submit" id="search-submit" class="button" title="Pesquisar" ><img src="../../material/action/1x_web/ic_search_black_18dp.png"/></button> -->
 			</div>
-			<div id="div-user">
-				<a href="login.html" title="LOGIN">
-					<!-- <button type="submit" id="login-button" class="button" title="Pesquisar" ><img src="../../material/image/1x_web/ic_portrait_black_24dp.png"/>Login</button> -->
-					<button type="button" id="login-button"><i class="material-icons">person</i>Login</button>
-				</a>
-			</div>
+			<a href="login.html" class="button"><i class="material-icons">person</i>Login</a>
 		</header>
 		<!-- MENU -->
 		<nav>
-            <ul>
-                <li><a href="products.html" title="PRODUTOS">PRODUTOS</a></li>
-                <li><a href="products_adm.html" title="PRODUTOS (ADMINISTRATIVO)">PRODUTOS (ADMINISTRATIVO)</a></li>
-                <li><a href="contact.html" title="CONTATO">CONTATO</a></li>
-            </ul>
+			<ul id="ul-main">
+				<li>
+					<a href="products.html" title="PRODUTOS" class="nav-item">PRODUTOS </a>
+				</li>
+				<li><a href="products_adm.html" title="PRODUTOS (ADMINISTRATIVO)" class="nav-item">PRODUTOS (ADMINISTRATIVO)</a></li>
+				<li><a href="contact.html" title="CONTATO" class="nav-item">CONTATO</a></li>
+			</ul>
 		</nav>
 		<!-- CONTEÚDO PRINCIPAL -->
 		<section id="section-index">
 			<h2>CASA DO AGRICULTOR</h2>
-			<div id="captioned-gallery">
-				<figure class="slider">
-					<figure>
-						<img src="../media/images/1.jpg" alt/>
-					</figure>
-					<figure>
-						<img src="../media/images/2.png" alt/>
-					</figure>
+			<div class="slider">
+				<figure>
+					<div class="slide">
+						<img src="../media/images/slide_one.jpg" alt/>
+					</div>
+			
+					<div class="slide">
+						<img src="../media/images/slide_two.jpg" alt/>
+					</div>
+			
+					<div class="slide">
+						<img src="../media/images/slide_three.jpg" alt/>
+					</div>
+			
+					<div class="slide">
+						<img src="../media/images/slide_four.jpg" alt/>
+					</div>
+			
+					<div class="slide">
+						<img src="../media/images/slide_five.jpg" alt/>
+					</div>
 				</figure>
 			</div>
 		</section>
@@ -60,7 +70,7 @@
 		<footer>
 			<a href="http://www.facebook.com/casadoagricultoripiau/">
 				<figure>
-					<img src="../media/images/facebook-box.png" alt/>
+					<img src="../media/../media/images/facebook-box.png" alt/>
 				</figure>
 			</a>
 			<a href="#">Voltar ao topo</a><br/> 

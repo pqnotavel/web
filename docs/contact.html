@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Loja de produtos agrícolas e veterinários">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" rel="stylesheet" href="css/style.css" />
         <link type="text/css" rel="stylesheet" href="css/style-contact.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -21,45 +22,33 @@
                 <input type="text" placeholder="Busca por, vacina, ração..." id="search-text" />
                 <button type="submit" id="search-submit" class="button" title="Pesquisar"><i class="material-icons">search</i></button>
             </div>
-            <div id="div-user">
-                <a href="login.html" title="LOGIN">
-                    <button type="button" id="login-button" class="button"><i class="material-icons">person</i>Login</button>
-                </a>
-            </div>
+            <a href="login.html" class="button"><i class="material-icons">person</i>Login</a>
         </header>
         <!-- MENU -->
         <nav>
-            <ul>
-                <li><a href="products.html" title="PRODUTOS">PRODUTOS</a></li>
-                <li><a href="products_adm.html" title="PRODUTOS (ADMINISTRATIVO)">PRODUTOS (ADMINISTRATIVO)</a></li>
-                <li><a href="contact.html" title="CONTATO">CONTATO</a></li>
+            <ul id="ul-main">
+                <li><a href="products.html" title="PRODUTOS" class="nav-item">PRODUTOS</a></li>
+                <li><a href="products_adm.html" title="PRODUTOS (ADMINISTRATIVO)" class="nav-item">PRODUTOS (ADMINISTRATIVO)</a></li>
+                <li><a href="contact.html" title="CONTATO" class="nav-item">CONTATO</a></li>
             </ul>
         </nav>
         <!-- CONTEÚDO PRINCIPAL -->
         <section>
-            <article>
-                <div class="container">
-                    <div>
-                        <h2>Fale conosco</h2>
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.925016182928!2d-39.73550778516514!3d-14.140505890096838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x738b400a303761d%3A0xf07d1fe2dfedddf!2sR.+Dois+de+Julho%2C+144%2C+Ipia%C3%BA+-+BA%2C+45570-000!5e0!3m2!1spt-BR!2sbr!4v1536196114476" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
-                        <div class="column">
-                            <form action="">
-                                <label for="fname">Nome</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Seu nome...">
-                                <label for="lname">Sobrenome</label>
-                                <input type="text" id="lname" name="lastname" placeholder="Seu sobrenome...">
-                                <label for="subject">Mensagem</label>
-                                <textarea id="subject" name="subject" placeholder="Escreva algo..."></textarea>
-                                <input type="submit" value="Enviar">
-                            </form>
-                        </div>
-                    </div>
+            <h2>CONTATO</h2>
+            <article class="container">
+                <h3>Fale conosco</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.925016182928!2d-39.73550778516514!3d-14.140505890096838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x738b400a303761d%3A0xf07d1fe2dfedddf!2sR.+Dois+de+Julho%2C+144%2C+Ipia%C3%BA+-+BA%2C+45570-000!5e0!3m2!1spt-BR!2sbr!4v1536196114476" allowfullscreen id="map" class="column"></iframe>
+                <div class="column">
+                    <form action="#">
+                        <label for="fname">Nome Completo</label>
+                        <input type="text" id="fname" class="text-contact" name="firstname" placeholder="Seu nome...">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="text-contact" name="email" placeholder="Seu sobrenome...">
+                        <label for="subject">Mensagem</label>
+                        <textarea id="subject" class="text-contact" name="subject" placeholder="Escreva algo..."></textarea>
+                        <input type="submit" id="submit-contact" value="Enviar">
+                    </form>
                 </div>
-
             </article>
         </section>
         <!-- BARRA LATERAL DIREITA -->
@@ -67,8 +56,7 @@
         </aside>
         <!-- RODAPÉ -->
         <footer>
-            <br/>
-            <br/>
+            <br/><br/>
             <!-- <h2>
 				<a href="contato.html">Contato</a>
 			</h2>

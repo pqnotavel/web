@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Produtos Veterinários">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" rel="stylesheet" href="css/style.css" />
-        <link type="text/css" rel="stylesheet" href="css/style-products.css" />
+        <link type="text/css" rel="stylesheet" href="css/style-products-adm.css " />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <title>Produtos | Casa do Agricultor</title>
     </head>
@@ -21,18 +22,16 @@
                 <input type="text" placeholder="Busca por, vacina, ração..." id="search-text" />
                 <button type="submit" id="search-submit" class="button" title="Pesquisar"><i class="material-icons">search</i></button>
             </div>
-            <div id="div-user">
-                <a href="login.html" title="LOGIN">
-                    <button type="button" id="login-button" class="button"><i class="material-icons">person</i>Login</button>
-                </a>
-            </div>
+            <a href="login.html" class="button"><i class="material-icons">person</i>Login</a>
         </header>
         <!-- MENU -->
         <nav>
-            <ul>
-                <li><a href="products.html" title="PRODUTOS">PRODUTOS</a></li>
-                <li><a href="products_adm.html" title="PRODUTOS (ADMINISTRATIVO)">PRODUTOS (ADMINISTRATIVO)</a></li>
-                <li><a href="contact.html" title="CONTATO">CONTATO</a></li>
+            <ul id="ul-main">
+                <li>
+                    <a href="products.html" title="PRODUTOS" class="nav-item">PRODUTOS</a>
+                </li>
+                <li><a href="products_adm.html" title="PRODUTOS (ADMINISTRATIVO)" class="nav-item">PRODUTOS (ADMINISTRATIVO)</a></li>
+                <li><a href="contact.html" title="CONTATO" class="nav-item">CONTATO</a></li>
             </ul>
         </nav>
         <!-- CONTEÚDO PRINCIPAL -->
@@ -44,10 +43,13 @@
                             <h2>Produtos Agrícolas</h2>
                         </caption>
                         <thead>
-                            <th>CÓDIGO</th>
-                            <th>DESCRIÇÃO</th>
-                            <th>TIPO</th>
-                            <th>QUANTIDADE</th>
+                            <tr>
+                                <th>CÓDIGO</th>
+                                <th>DESCRIÇÃO</th>
+                                <th>TIPO</th>
+                                <th>QUANTIDADE</th>
+                            </tr>
+                            
                         </thead>
                         <tbody>
                             <tr>
@@ -123,10 +125,12 @@
                             <h2>Produtos Veterinários</h2>
                         </caption>
                         <thead>
-                            <th>CÓDIGO</th>
-                            <th>DESCRIÇÃO</th>
-                            <th>TIPO</th>
-                            <th>QUANTIDADE</th>
+                            <tr>
+                                <th>CÓDIGO</th>
+                                <th>DESCRIÇÃO</th>
+                                <th>TIPO</th>
+                                <th>QUANTIDADE</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>

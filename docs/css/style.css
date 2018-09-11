@@ -1,21 +1,33 @@
 /* All */
 * {
     font-family: 'Roboto';
-    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    outline: none;
     text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Links */
+a{
+    color: white
+}
+
+/* Body */
+body{
+    width: 100%;
+    /* background-color: #dde; */
 }
 
 /* Header */
 header{
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: center; 
 }
 
 header, footer{
-    background-color: rgb(0, 168, 89);
+    background-color: rgb(34, 61, 98);
     text-align: center;
 }
 
@@ -39,10 +51,10 @@ header, footer{
     margin: auto;
 }
 
-#div-search-bar *{
-    border: 0px solid white;
+#div-search-bar *, a.button{
+    border: 0px solid rgb(34, 61, 98);
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 16px;  
 }
 
 #search-text{
@@ -57,13 +69,13 @@ header, footer{
     padding: 5px 10px;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
-    background-color: white;
     text-align: center;
 }
 
 #search-submit:hover{
     color: white;
-    background-color: black;
+    background-color: rgb(66, 117, 189);
+    cursor: pointer;
 }
 
 #div-user{
@@ -71,72 +83,66 @@ header, footer{
     padding: 10px;
 }
 
-#login-button{
-    background-color: white;
-    border: 0 solid white;
-    border-radius: 25px;
-    padding: 10px;
-}
-
-#login-button:hover{
-    border-color: black;
-    background-color: black;
-    color: white;
-}
-
-/* Menu */
-nav{
-    background-color: rgb(0, 168, 89);
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+a.button{
+    justify-content: center;
+    justify-items: center;
     
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    font-weight: bolder;
     text-align: center;
+    padding:6px;
+}
+
+a.button:hover{
+    border-color: rgb(66, 117, 189);
+    color: white;
+    background-color: rgb(66, 117, 189);
+    cursor: pointer;
+}
+
+
+nav{
+    background-color:  rgb(34, 61, 98);
+    padding-bottom: 10px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+#ul-main{
+    /* padding: 10px; */
+}
+
+.nav-item{
     padding: 10px;
-    text-decoration: none;
 }
 
-nav ul li a:hover {
-    background-color: white;
-    color: rgb(0, 168, 89);
+.hidden{
+    display: none;
+    list-style-type: none;
 }
 
-nav li a:active{
-    background-color: white;
-    color: rgb(0, 168, 89);
+.hidden li{
+    padding: 5px 10px;
 }
 
-/* Responsiveness */
-@media screen and (max-width: 800px) {
-    nav li{
+.nav-item:hover + .hidden, .hidden:hover{
+    display: block;
+}
+
+.nav-item:hover, .hidden li a:hover{
+    color: rgb(66, 117, 189);
+}
+
+@media only screen and (max-width: 500px) {
+    header *{
+        display: inline-flex;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul{
         display: block;
         width: 100%;
+        text-align: center;
     }
-    
-    header {
-        float: none;
-        display: block;
-    }
-
-    #div-search-bar{
-        width: 100%;
-    }
-
-    /* #div-user{
-        float: right;
-    } */
 }
