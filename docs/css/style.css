@@ -1,142 +1,39 @@
-/* All */
-* {
-    font-family: 'Roboto';
-    margin: 0px;
-    padding: 0px;
-    outline: none;
-    text-decoration: none;
-    box-sizing: border-box;
+.opacity-low{
+    opacity: 0.5;
 }
 
-/* Links */
-a{
-    color: white
+.my-logo{
+    font-family: 'Raleway';
 }
 
-/* Header */
-header{
-    width: 100%;
+.product-info{
+    font-weight: bolder;
+}
+
+.opacity-5
+{
+   display: inline-block;
+   position: relative;    
+}
+.opacity-5::before
+{
+   content: "";
+   display: block;
+   position: absolute;
+   z-index: -1;
+   width: 100%;
+   height: 100%;
+   background:lightblue;
+   opacity: .5;
+}
+
+body {
     display: flex;
-    align-items: center; 
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-header, footer{
-    background-color: rgb(34, 61, 98);
-    text-align: center;
+main {
+    flex: 1 0 auto;
 }
-
-#div-logo h1{
-    font-size: 25px;
-    padding: 10px;
-    color: white;
-}
-
-#div-logo, #div-user{
-    width: 250px;
-}
-
-#search-text:focus, #search-submit:focus{
-    outline: none;
-}
-
-#div-search-bar{
-    width: 400px;
-    display: flex;
-    margin: auto;
-}
-
-#div-search-bar *, a.button{
-    border: 0px solid rgb(34, 61, 98);
-    border-radius: 25px;
-    font-size: 16px;  
-}
-
-#search-text{
-    width: 80%;
-    padding: 10px 20px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
-}
-
-#search-submit{
-    width: 20%;
-    padding: 5px 10px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-    text-align: center;
-}
-
-#search-submit:hover{
-    color: white;
-    background-color: rgb(66, 117, 189);
-    cursor: pointer;
-}
-
-#div-user{
-    text-align: right;
-    width: 250px;
-}
-
-a.button{
-    padding: 10px;
-}
-
-a.button:hover{
-    border-color: rgb(66, 117, 189);
-    color: white;
-    background-color: rgb(66, 117, 189);
-    cursor: pointer;
-}
-
-
-nav{
-    background-color:  rgb(34, 61, 98);
-    padding-bottom: 10px;
-}
-
-nav ul{
-    display: flex;
-    list-style-type: none;
-}
-
-#ul-main{
-    /* padding: 10px; */
-}
-
-.nav-item{
-    padding: 10px;
-}
-
-.hidden{
-    display: none;
-    list-style-type: none;
-}
-
-.hidden li{
-    padding: 5px 10px;
-}
-
-.nav-item:hover + .hidden, .hidden:hover{
-    display: block;
-}
-
-.nav-item:hover, .hidden li a:hover{
-    color: rgb(66, 117, 189);
-}
-
-section {
-  min-height: 100vh;
-}
-
-@media only screen and (max-width: 500px) {
-    header *{
-        display: inline-flex;
-        width: 100%;
-        text-align: center;
-    }
-    nav ul{
-        display: block;
-        width: 100%;
-        /* text-align: center; */
-    }
-}
+      
