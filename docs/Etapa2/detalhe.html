@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Detalhe | Casa do Agricultor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+        <link rel="shortcut icon" href="media/images/logo_small.png" />
+    </head>
+
+    <body class="indigo lighten-5">
+        <nav class="light-blue darken-4">
+            <div class="nav-wrapper row">
+                <div class="col s4">
+                    <a href="index.html" class="brand-logo left">casa do agricultor</a>
+                </div>
+                <a href="#" data-target="mobile-demo" class=" right sidenav-trigger"><i class="material-icons">menu</i></a>
+                <nav class="col s4 light-blue darken-4 z-depth-0 hide-on-med-and-down">
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+                <div class="col s4 right">
+                    <!--Desktop-->
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="produtos.html"><i class="material-icons left">pets</i>Produtos</a>
+                        </li>
+                        <li>
+                            <a href="login.html"><i class="material-icons left">person</i>Login</a>
+                        </li>
+                        <li>
+                            <a href="contato.html">Contato<i class="material-icons left">phone</i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Mobile-->
+                <ul class="sidenav" id="mobile-demo">
+                    <li>
+                        <a href="produtos.html">Produtos<i class="material-icons right">pets</i></a>
+                    </li>
+                    <li>
+                        <a href="login.html">Login<i class="material-icons right">person</i></a>
+                    </li>
+                    <li>
+                        <a href="contato.html">Contato<i class="material-icons right">phone</i></a>
+                    </li>
+                    <li>
+                        <nav class="light-blue darken-4 z-depth-0">
+                            <div class="nav-wrapper">
+                                <form>
+                                    <div class="input-field">
+                                        <input id="search" type="search" required>
+                                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                        <i class="material-icons">close</i>
+                                    </div>
+                                </form>
+                            </div>
+                        </nav>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="container" >
+            <div class="map blue-text text-darken-4">
+                <a class="blue-text text-darken-4" href="index.html" target="_blank">Home</a> > <a  class="blue-text text-darken-4" href="produtos.html" target="_blank">Produtos Veterinários</a>
+            </div>
+            <div class="row">
+                <div class="card col s12">
+                    <div class="card-image col s12 m12 l6">
+                        <img class="materialboxed" data-caption="ADE Labovet - 250 mL" src="media/images/detalhe.jpg" alt="">
+                    </div>
+                    <div class="card-content col s12 m12 l6">
+                        <h5>ADE LABOVET - 250 ML</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eos architecto ea cupiditate aut?
+                            Quae
+                            doloribus cumque nam impedit ut. Quam eaque molestias reiciendis dolor ea nostrum? Aperiam reiciendis
+                            nostrum
+                            dolore molestiae consectetur sunt veritatis culpa cum ipsa distinctio placeat eaque facilis iusto
+                            asperiores
+                            maiores, qui nesciunt laboriosam! Eligendi quibusdam alias deleniti, consequatur enim sunt nihil nobis
+                            laboriosam repellendus blanditiis ut sequi incidunt nisi cumque sit assumenda consectetur! Harum
+                            perferendis
+                            quam ipsum, expedita dolorum cupiditate iusto nihil exercitationem laborum itaque. Distinctio recusandae
+                            asperiores error veniam autem? Nobis, eius! Accusamus aut reiciendis minus maiores libero ea recusandae?
+                            Dolor
+                            aspernatur atque eligendi.</p>
+                        <a href="contato.html" class="waves-effect waves-light btn col s12 ">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer light-blue darken-4">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2018 Copyright
+                    <a class="grey-text text-lighten-4 right" href="http://www.facebook.com/casadoagricultoripiau/">Facebook</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.js"></script>
+
+        <script type="text/javascript">
+            $('.button-collapse').sidenav();
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.sidenav').sidenav();
+                $('.materialboxed').materialbox();
+            });
+        </script>
+
+    </body>
+</html>
