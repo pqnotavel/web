@@ -1,9 +1,8 @@
 <?php 
+    // Message
+    include_once 'includes/message.php';
     //Header
     include_once('includes/header.php');
-
-    //Session
-    session_start();
 ?>
 <div class="slider hide-on-med-and-down">
     <ul class="slides">

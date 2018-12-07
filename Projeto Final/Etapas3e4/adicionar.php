@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Header
 include_once 'includes/header.php';
 ?>
@@ -8,25 +9,41 @@ include_once 'includes/header.php';
 		<h3 class="light"> Novo Produto </h3>
 		<form action="php_action/create.php" method="POST" enctype="multipart/form-data">
 			<div class="input-field col s12">
-				<input type="text" name="description" id="description">
+				<input type="text" name="description" id="description" required>
 				<label for="description">Descrição</label>
 			</div>
 
 			<div class="input-field col s12">
-				<input type="text" name="brand" id="brand">
+				<input type="text" name="brand" id="brand" required>
 				<label for="brand">Marca</label>
 			</div>
 
 			<div class="input-field col s12">
-				<input type="text" name="info" id="info">
+				<input type="text" name="info" id="info" required>
 				<label for="info">Informações</label>
 			</div>
 
 			<div class="input-field col s12">
-				<input type="file" name="image" value="Imagem:">
+				<input type="number" name="quantity" id="quantity" required>
+				<label for="quantity">Quantidade</label>
 			</div>
-			<button type="submit" name="add" class="btn right amber"> Cadastrar </button>
-			<a href="index.php" class="btn"> Lista de clientes </a>
+
+			<div class="input-field col s12">
+				<input type="file" name="image" value="Imagem" required>
+			</div>
+
+<!-- 			<div class="file-field input-field col s12">
+				<div class="btn-small">
+					<span>Escolher imagem</span>
+					<input type="file" name="image" value="Imagem:" required>
+				</div>
+				<div class="file-path-wrapper">
+					<input class="file-path validate" type="text">
+				</div>
+			</div> -->
+
+			<button type="submit" name="add" class="btn right green col s4"> Cadastrar </button>
+			<a href="produtos.php" class="btn col s4"> Lista de produtos </a>
 		</form>
 		
 	</div>

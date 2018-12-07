@@ -11,20 +11,19 @@
         <link rel="shortcut icon" href="media/images/logo_small.png" />
     </head>
 
-    <body class="indigo lighten-5">
-        <nav class="light-blue darken-4">
+    <body >
+        <nav class="teal darken-4">
             <div class="nav-wrapper row">
                 <div class="col l4 s12">
-                    <a href="index.php" class="brand-logo left hide-on-med-and-down">casa do agricultor</a>
-                    <a href="index.php" class="brand-logo center hide-on-large-only">casa do agricultor</a>
+                    <a href="index.php" class="brand-logo left hide-on-med-and-down">Casa do Agricultor</a>
+                    <a href="index.php" class="brand-logo center hide-on-large-only left">Casa do Agricultor</a>
                 </div>
-                <!-- <a href="index.php" class="brand-logo hide-on-med-and-up">cda</a> -->
-                <a href="#" data-target="mobile-demo" class=" left sidenav-trigger"><i class="material-icons">menu</i></a>
-                <nav class="col s4 light-blue darken-4 z-depth-0 hide-on-med-and-down">
+                <a href="#" data-target="mobile-demo" class=" right sidenav-trigger"><i class="material-icons">menu</i></a>
+                <nav class="col s4 teal darken-4 z-depth-0 hide-on-med-and-down">
                     <div class="nav-wrapper">
-                        <form>
+                        <form action="produtos.php" method="GET">
                             <div class="input-field">
-                                <input id="search" type="search" required>
+                                <input id="search" type="search" name="search" required>
                                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                                 <i class="material-icons">close</i>
                             </div>
@@ -34,12 +33,39 @@
                 <div class="col s4 right">
                     <!--Desktop-->
                     <ul class="right hide-on-med-and-down">
-                        <li>
-                            <a href="produtos.php"><i class="material-icons left">pets</i>Produtos</a>
-                        </li>
+                        <?php 
+                        // Verifica se há alguém logado
+                        if(!isset($_SESSION['logado'])){ ?>
                         <li>
                             <a href="login.php"><i class="material-icons left">person</i>Login</a>
                         </li>
+                        <?php } 
+                        else{ 
+                             //Banco
+                            require_once('includes/db.php');
+                            $id = $_SESSION['user_id'];
+                            $sql = "SELECT name FROM users WHERE id = $id";
+                            $resultado = mysqli_query($db_link, $sql);
+                            $user = mysqli_fetch_array($resultado);
+                        ?>
+                        <!-- Dropdown Trigger -->
+                        <li>
+                            <a class="dropdown-trigger" href="#!" data-target="dropdown1"><?php echo $user['name'] ?><i class="material-icons right">arrow_drop_down</i></a>
+                        </li>
+                        <li>
+                            <a href="produtos.php"><i class="material-icons left">pets</i>Produtos</a>
+                        </li>
+                        <?php } ?>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown1" class="dropdown-content">
+                            <form>
+                                <?php if(isset($_SESSION['adm']) AND $_SESSION['adm'] == 1){ ?>
+                                <li><a href="cadastrar.php">Novo Adm</a></li>
+                                <?php } ?>
+                                <li><a href="php_action/logout.php">Sair</a></li>
+                            </form>
+                        </ul>
+
                         <li>
                             <a href="contato.php">Contato<i class="material-icons left">phone</i></a>
                         </li>
@@ -59,9 +85,9 @@
                     <li>
                         <nav class="light-blue darken-4 z-depth-0">
                             <div class="nav-wrapper">
-                                <form>
+                                <form action="produtos.php" method="GET">
                                     <div class="input-field">
-                                        <input id="search" type="search" required>
+                                        <input id="search" type="search" name="search" required>
                                         <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                                         <i class="material-icons">close</i>
                                     </div>

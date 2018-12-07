@@ -1,5 +1,5 @@
     </main>
-    <footer class="page-footer light-blue darken-4">
+    <footer class="page-footer teal darken-4">
         <div class="container">
 
         </div>
@@ -13,6 +13,7 @@
 
     <!-- Scripts -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
 
     <script type="text/javascript">
@@ -27,6 +28,11 @@
             $('.modal').modal();
             $('.fixed-action-btn').floatingActionButton();
             $('textarea#info').characterCounter();
+            $('textarea#message').characterCounter();
+            $(".dropdown-trigger").dropdown({coverTrigger: false});
+            // $(".dropdown-trigger").dropdown(recalculateDimensions());
+            $('.phone_with_ddd').mask('(00) 00009-0000');
+            $("#zoom").elevateZoom();
         });
     </script>
 

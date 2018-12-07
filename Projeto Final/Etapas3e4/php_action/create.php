@@ -14,31 +14,21 @@ function clear($input) {
 }
 
 if(isset($_POST['add'])){
+	$description = clear($_POST['description']);
+	$brand = clear($_POST['brand']);
+	$info = clear($_POST['info']);
+	$quantity = clear($_POST['quantity']);
+	$image = $_FILES['image']['tmp_name'];
+	$image = addslashes(file_get_contents($image));
 
-	// if(getimagesize($_FILES['image']['tmp_name'] == FALSE)){
-	// 	$_SESSION['mensagem'] = "Insira uma imagem!";
-	// 	header('Location: ../adicionar.php');
-	// }
-	// else{
-		$description = clear($_POST['description']);
-		$brand = clear($_POST['brand']);
-		$info = clear($_POST['info']);
-		$image = mysqli_real_escape_string(file_get_contents($_FILES['image']['tmp_name']));
-		$image = addslashes(file_get_contents($image));
-		$image = base64_encode($image);
+	$sql = "INSERT INTO products (description, brand, info, quantity, image) VALUES ('$description', '$brand', '$info', '$quantity', '$image')";
 
-		// $image = addslashes($_FILES['image']['tmp_name']);
-		// $image = file_get_contents($image);
-
-		$sql = "INSERT INTO products (description, brand, info, image) VALUES ('$description', '$brand', '$info', '$image')";
-
-		if(mysqli_query($db_link, $sql)){
-			$_SESSION['mensagem'] = "Cadastrado com sucesso!";
-			header('Location: ../index.php');
-		}
-		else{
-			$_SESSION['mensagem'] = "Erro ao cadastrar";
-			header('Location: ../index.php');
-		}
-	// }	
+	if(mysqli_query($db_link, $sql)){
+		$_SESSION['mensagem'] = "Cadastrado com sucesso!";
+		header('Location: ../produtos.php');
+	}
+	else{
+		$_SESSION['mensagem'] = "Erro ao cadastrar";
+		header('Location: ../produtos.php');
+	}
 }
