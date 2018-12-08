@@ -11,7 +11,9 @@ if(isset($_POST['edit'])){
 	$info = mysqli_escape_string($db_link, $_POST['info']);
 	$quantity = mysqli_escape_string($db_link, $_POST['quantity']);
 	
-	if(empty($_FILES['image'])){
+	if(empty($_POST['image']))
+	{
+
 		$sql = "UPDATE products SET description = '$description', brand = '$brand', info = '$info', quantity = '$quantity' WHERE id = '$id'";
 	}
 	else{
