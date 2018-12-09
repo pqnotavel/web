@@ -1,5 +1,7 @@
 <?php
 //Variáveis
+// Sessão
+session_start();
 
 if(isset($_POST['send'])){
 	$name = $_POST['name'];
@@ -71,5 +73,8 @@ if(isset($_POST['send'])){
   $mgm = "ERRO AO ENVIAR E-MAIL!";
   echo "";
   }
+  $_SESSION['mensagem'] = "Mensagem enviada com sucesso!";
+  header('Location: ../index.php');
+
 }
 ?>

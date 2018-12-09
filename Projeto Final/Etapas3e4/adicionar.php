@@ -24,7 +24,7 @@ include_once 'includes/header.php';
 			</div>
 
 			<div class="input-field col s12">
-				<input type="number" name="quantity" id="quantity" required>
+				<input type="number" name="quantity" id="quantity" min="0"required>
 				<label for="quantity">Quantidade</label>
 			</div>
 

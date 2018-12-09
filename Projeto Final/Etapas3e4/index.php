@@ -32,26 +32,26 @@
         $result = mysqli_query($db_link, $sql);
         while($product=mysqli_fetch_array($result)){
     ?>
-    <a href="detalhe.php?id=<?php echo $product['id']; ?>">
-        <div class="col s12 m6 l3">
-            <div class="card">
+    <div class="col s12 m6 l3">
+        <div class="card">
+            <a href="detalhe.php?id=<?php echo $product['id']; ?>">
                 <div class="card-image">
                     <img src="data:image/jpeg;base64,<?php echo base64_encode($product['image']);?>" alt=""/>
                 </div>
-                <div class="card-content">
-                    <span class="card-title"><?php echo($product['description']) ?></span>
-                    <p><?php echo($product['brand']) ?></p>
-                </div>
+            </a>
+            <div class="card-content">
+                <span class="card-title"><?php echo($product['description']) ?></span>
+                <p><?php echo($product['brand']) ?></p>
             </div>
         </div>
-    </a>
+    </div>
     <?php  
         }// fim do while
     ?>
 </div>
 
 <div class="carousel">
-    <h5 class="center-align blue-text text-darken-4">Aqui também tem!</h5>
+    <h5 class="center-align teal-text text-darken-4">Aqui também tem!</h5>
     <a class="carousel-item" href="#"><img src="media/images/racao.png" class="circle" alt=""></a>
     <a class="carousel-item" href="#"><img src="media/images/pesticidas.png" class="circle" alt=""></a>
     <a class="carousel-item" href="#"><img src="media/images/sementes.png" class="circle" alt=""></a>

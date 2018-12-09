@@ -17,8 +17,8 @@
             $_SESSION['mensagem'] = "Campo vazio!";
         }
 
-            // setcookie('username', $username, time()+600);
-            // setcookie('password', $password, time()+600);
+        setcookie('username', $username, time()+600);
+        setcookie('password', $password, time()+600);
         
         $sql = "SELECT username FROM users WHERE username = '$username'";
         $resultado = mysqli_query($db_link, $sql);      

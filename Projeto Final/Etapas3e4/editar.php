@@ -32,7 +32,7 @@ endif;
 			</div>
 
 			<div class="input-field col s12">
-				<input type="number" name="quantity" value="<?php echo $product['quantity'];?>" id="quantity" class="validate" required>
+				<input type="number" name="quantity" min="0" value="<?php echo $product['quantity'];?>" id="quantity" class="validate" required>
 				<label for="quantity">Quantidade</label>
 			</div>
 
